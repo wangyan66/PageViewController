@@ -14,5 +14,8 @@
     [super awakeFromNib];
     // Initialization code
 }
-
++ (instancetype)loadCell{
+    NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"WyMessageCollectionViewCell" owner:self options:nil];
+    return [nib objectAtIndex:0];
+}
 @end
